@@ -1,5 +1,8 @@
 ---
 title: "SPARQL Queries"
+authors:
+  - name: "Rowdy de Groot"
+    orcid: "https://orcid.org/0000-0002-1248-1986"
 ---
 
 # SPARQL Queries
