@@ -1,5 +1,5 @@
 ---
-title: "GraphDB Desktop Mode"
+title: "GraphDB Desktop"
 ---
 
 # GraphDB Desktop Mode
