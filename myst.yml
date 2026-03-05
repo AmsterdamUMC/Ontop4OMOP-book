@@ -5,6 +5,7 @@ project:
   github: AmsterdamUMC/Ontop4OMOP-book
   authors:
     - name: Carsten Fortmann-Grote
+      orcid: 0000-0002-2579-5546
     - name: Rowdy de Groot
       orcid: 0000-0002-1248-1986
     - name: Andra Waagmeester
