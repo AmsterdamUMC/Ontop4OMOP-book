@@ -1,5 +1,8 @@
 ---
 title: "OBDA Mappings with Ontop"
+authors:
+  - name: "Carsten Fortmann-Grote"
+    orcid: "https://orcid.org/0000-0002-2579-5546"
 ---
 
 # Converting Relational Databases to RDF with Ontop
