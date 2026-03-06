@@ -82,7 +82,7 @@ Add the `bin` directory to your **System PATH** via Environment Variables.
 
 4. Verify the installation:
    ```bash
-   ontop version
+   ontop --version
    ```
    Expected output: `Ontop version 5.x`
 
