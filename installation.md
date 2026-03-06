@@ -132,7 +132,7 @@ brew install duckdb
 :::
 :::{tab-item} Ubuntu
 ```bash
-sudo apt install duckdb
+sudo snap install duckdb
 ```
 :::
 :::{tab-item} Windows
