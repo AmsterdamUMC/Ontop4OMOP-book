@@ -155,6 +155,8 @@ Expected results:
 
 ---
 ### Exploring the RDF using DESCRIBE
+Query to find all properties of person 1 in the dataset.
+
 ```sparql
 PREFIX omop:         <https://w3id.org/omop/ontology/>
 PREFIX omop_concept: <http://example.org/omop/concept/>
@@ -162,7 +164,9 @@ PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
 
 DESCRIBE <http://example.org/omop/person/1>
 ```
-```rdf
+Expected result:
+
+```ttl
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex: <http://example.org/> .
@@ -195,7 +199,11 @@ PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
 DESCRIBE <http://example.org/omop/observation/1>
 ```
 
-```rdf
+Query to find properties of the first obervation about person 1
+
+Expected result:
+
+```ttl
 @prefix omop: <https://w3id.org/omop/ontology/> .
 @prefix omop_concept: <http://example.org/omop/concept/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -212,6 +220,8 @@ DESCRIBE <http://example.org/omop/observation/1>
 
 ```
 
+Query to find the properties of the concept id describing this observation
+
 ```sparql
 PREFIX omop:         <https://w3id.org/omop/ontology/>
 PREFIX omop_concept: <http://example.org/omop/concept/>
@@ -219,6 +229,8 @@ PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
 
 DESCRIBE omop_concept:4152209
 ```
+
+Expected result:
 
 ```ttl
 @prefix omop: <https://w3id.org/omop/ontology/> .
