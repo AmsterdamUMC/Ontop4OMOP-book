@@ -154,6 +154,87 @@ Expected results:
 | visit_occurrence | 999 |
 
 ---
+### Exploring the RDF using DESCRIBE
+```sparql
+PREFIX omop:         <https://w3id.org/omop/ontology/>
+PREFIX omop_concept: <http://example.org/omop/concept/>
+PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
+
+DESCRIBE <http://example.org/omop/person/1>
+```
+```rdf
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+@prefix omop: <https://w3id.org/omop/ontology/> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://example.org/omop/person/1> a omop:Person;
+  omop:has_gender <http://example.org/omop/concept/8507>;
+  omop:year_of_birth 1957;
+  omop:has_visit_occurrence <http://example.org/omop/visit/1>;
+  omop:has_condition_occurrence <http://example.org/omop/condition/1>, <http://example.org/omop/condition/1000>,
+    <http://example.org/omop/condition/1177>;
+  omop:has_measurement <http://example.org/omop/measurement/1>, <http://example.org/omop/measurement/666>;
+  omop:has_observation <http://example.org/omop/observation/1>, <http://example.org/omop/observation/1000>,
+    <http://example.org/omop/observation/1999>, <http://example.org/omop/observation/2998>,
+    <http://example.org/omop/observation/3997>, <http://example.org/omop/observation/4996>,
+    <http://example.org/omop/observation/5995>;
+  omop:has_procedure_occurrence <http://example.org/omop/procedure/1>, <http://example.org/omop/procedure/764> .
+```
+
+```sparql
+PREFIX omop:         <https://w3id.org/omop/ontology/>
+PREFIX omop_concept: <http://example.org/omop/concept/>
+PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
+
+DESCRIBE <http://example.org/omop/observation/1>
+```
+
+```rdf
+@prefix omop: <https://w3id.org/omop/ontology/> .
+@prefix omop_concept: <http://example.org/omop/concept/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<http://example.org/omop/observation/1> a omop:Observation;
+  omop:has_concept omop_concept:4152209;
+  omop:value_source_value "Cyprus" .
+
+```
+
+```sparql
+PREFIX omop:         <https://w3id.org/omop/ontology/>
+PREFIX omop_concept: <http://example.org/omop/concept/>
+PREFIX rdfs:         <http://www.w3.org/2000/01/rdf-schema#>
+
+DESCRIBE omop_concept:4152209
+```
+
+```ttl
+@prefix omop: <https://w3id.org/omop/ontology/> .
+@prefix omop_concept: <http://example.org/omop/concept/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+omop_concept:4152209 a omop:Concept;
+  omop:name "Born in Cyprus";
+  rdfs:label "Born in Cyprus" .
+```
 
 ### Q1 — How many patients have each diagnosis?
 
