@@ -11,15 +11,16 @@ authors:
 
 # Use Case: HemaFAIR Training School
 
-[HemaFAIR](https://github.com/AmsterdamUMC/Ontop4OMOP/tree/hemafair) is a
-clinical registry for patients with rare inherited haematological disorders,
+This use case uses synthetic data generated from one of the registries from the
+[HemaFAIR](https://github.com/AmsterdamUMC/Ontop4OMOP/tree/hemafair) project.
+The dataset contains data of patients with rare inherited haematological disorders,
 focusing on three primary diagnoses:
 
-- **Beta-thalassaemia** — mutations in the beta-globin gene reducing haemoglobin production
-- **Alpha-thalassaemia** — mutations in alpha-globin genes, ranging from mild to severe
-- **Sickle cell disease** — causes sickling of red blood cells and haemolytic anaemia
+- **Beta-thalassaemia**
+- **Alpha-thalassaemia**
+- **Sickle cell disease**
 
-The registry collects demographics, genotypes, iron burden measurements (ferritin,
+The dataset contains demographics, genotypes, iron burden measurements (ferritin,
 serum iron, cardiac and liver MRI T2\*), transfusion history, chelation and other
 treatments, and comorbidities. The data were mapped to the
 [OMOP CDM](https://www.ohdsi.org/data-standardization/) and loaded into PostgreSQL.
@@ -30,7 +31,7 @@ SPARQL endpoint using Ontop and the
 then answer six clinical registry questions with SPARQL.
 
 :::{note}
-A **live SPARQL endpoint** for this use case is available at
+A live SPARQL endpoint for this use case is available at
 [http://51.15.26.149:8081/](http://51.15.26.149:8081/).
 You can paste any query from this chapter directly into the Ontop web UI.
 :::
